@@ -21,7 +21,7 @@ if ( isMobile() ) {
 
 $('.container').find('img').preloader({
 
-  data: dataName, // this is the data attr that contains the url you wan to load (default: 'data-src')
+  data: dataName, // this is the data attr that contains the url you want to load (default: 'data-src')
 
   each: function() {
 
