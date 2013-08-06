@@ -32,12 +32,9 @@ $('.container').find('img').preloader({
 
   all: function() {
 
-    $(this).each(function() {
+    // inside the"all" function "this" is an array with all jquery image objects
 
-      // inside the"all" function "this" is an array with all jquery image objects
-
-      console.log(this);
-    });
+    console.log(this);
 
     $('<h3 />', {
         text: 'All Images have been loaded!'
