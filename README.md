@@ -16,7 +16,7 @@ The Javascript:
 <div class="highlight">
 <pre>var dataName = 'desktop';
 
-if ( $(window).width() &lt;= 480  ) {
+if ( isMobile() ) {
     dataName = 'mobile'; // You can have several data attributes pointing to diferrent image sizes
 }
 
