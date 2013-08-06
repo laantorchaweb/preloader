@@ -12,6 +12,7 @@ The HTML:
 The Javascript:
 
 ```javascript
+var dataName = 'desktop';
 
 if ( isMobile() ) {
     // You can have several data attributes pointing to diferent image sizes
