@@ -14,10 +14,9 @@ The HTML:
 The Javascript:
 
 <div class="highlight">
-<pre>
-var dataName = 'desktop';
+<pre>var dataName = 'desktop';
 
-if ( $(window).width() <= 480  ) {
+if ( $(window).width() &lt;= 480  ) {
     dataName = 'mobile'; // You can have several data attributes pointing to diferrent image sizes
 }
 
@@ -27,7 +26,7 @@ $('.container').find('img').preloader({
 
   each: function() {
 
-    // inside the "each" function "this" is the loaded image
+    // inside the &quot;each&quot; function &quot;this&quot; is the loaded image
 
     console.log(this);
   },
@@ -36,12 +35,12 @@ $('.container').find('img').preloader({
 
     $(this).each(function() {
 
-      // inside the "all" function "this" is an array with all jquery image objects
+      // inside the &quot;all&quot; function &quot;this&quot; is an array with all jquery image objects
 
       console.log(this);
     });
 
-    $('<h3 />', {
+    $('&lt;h3 /&gt;', {
         text: 'All Images have been loaded!'
     }).prependTo('.status');
   }
