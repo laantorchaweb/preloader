@@ -6,7 +6,7 @@ This is a jquery plugin for pre loading images, it works by grabbing the src of 
 The HTML:
 
 ```html
-    &lt;img class=&quot;image&quot; src=&quot;&quot; data-desktop=&quot;/images/desktop/yourImage.jpg&quot; data-mobile=&quot;/images/mobile/yourImage.jpg&quot; alt=&quot;Image&quot; &gt;
+<img class="image" src="" data-desktop="/images/desktop/yourImage.jpg" data-mobile="/images/mobile/yourImage.jpg" alt="Image" >
 ```
 
 The Javascript:
@@ -14,7 +14,8 @@ The Javascript:
 ```javascript
 
 if ( isMobile() ) {
-    dataName = 'mobile'; // You can have several data attributes pointing to diferrent image sizes
+    // You can have several data attributes pointing to diferrent image sizes
+    dataName = 'mobile';
 }
 
 $('.container').find('img').preloader({
@@ -23,7 +24,7 @@ $('.container').find('img').preloader({
 
   each: function() {
 
-    // inside the &quot;each&quot; function &quot;this&quot; is the loaded image
+    // inside the "each" function "this" is the loaded image
 
     console.log(this);
   },
@@ -32,18 +33,17 @@ $('.container').find('img').preloader({
 
     $(this).each(function() {
 
-      // inside the &quot;all&quot; function &quot;this&quot; is an array with all jquery image objects
+      // inside the"all" function "this" is an array with all jquery image objects
 
       console.log(this);
     });
 
-    $('&lt;h3 /&gt;', {
+    $('<h3 />;', {
         text: 'All Images have been loaded!'
     }).prependTo('.status');
   }
 
 });
-
 ```
 
 Live Demo
