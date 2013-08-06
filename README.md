@@ -7,7 +7,7 @@ The HTML:
 
 <div class="highlight">
 <pre>
-    <img class="image" src="" data-desktop="/images/desktop/yourImage.jpg" data-mobile="/images/mobile/yourImage.jpg" alt="Image" >
+    &lt;img class=&quot;image&quot; src=&quot;&quot; data-desktop=&quot;/images/desktop/yourImage.jpg&quot; data-mobile=&quot;/images/mobile/yourImage.jpg&quot; alt=&quot;Image&quot; &gt;
 </pre>
 </div>
 
