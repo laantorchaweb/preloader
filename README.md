@@ -5,16 +5,13 @@ This is a jquery plugin for pre loading images, it works by grabbing the src of 
 
 The HTML:
 
-<div class="highlight">
-<pre>
+```html
     &lt;img class=&quot;image&quot; src=&quot;&quot; data-desktop=&quot;/images/desktop/yourImage.jpg&quot; data-mobile=&quot;/images/mobile/yourImage.jpg&quot; alt=&quot;Image&quot; &gt;
-</pre>
-</div>
+```
 
 The Javascript:
 
-<div class="highlight">
-<pre>var dataName = 'desktop';
+```javascript
 
 if ( isMobile() ) {
     dataName = 'mobile'; // You can have several data attributes pointing to diferrent image sizes
@@ -47,8 +44,7 @@ $('.container').find('img').preloader({
 
 });
 
-</pre>
-</div>
+```
 
 Live Demo
 ---------
