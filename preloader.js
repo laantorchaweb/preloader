@@ -17,7 +17,9 @@
     this.element = $(element).map(function(i) {
 
       if( $(this).data( _this.options.data ) ) {
+
         return this;
+
       } else {
 
         if( _this.options.hideIfNoData ) {
@@ -50,13 +52,13 @@
 
         $.data(elem, 'done', ('error' == e.type) ? false : true);
 
-        if(_this.options.each instanceof Function) {
+        if( _this.options.each instanceof Function ) {
 
           _this.options.each.call( $img[0] );
 
         }
 
-        if(done.length >= _this.element.length && _this.options.all instanceof Function) {
+        if( done.length >= _this.element.length && _this.options.all instanceof Function ) {
 
           _this.options.all.call( done );
 
@@ -74,11 +76,11 @@
       var _this      = this,
           attributes = $(elem).prop('attributes');
 
-      $.each(attributes, function() {
+      $.each( attributes, function() {
 
         if( this.name !== 'src' && this.name !== 'data-' + _this.options.data ) {
 
-            $img.attr(this.name, this.value);
+            $img.attr( this.name, this.value );
 
         }
 
