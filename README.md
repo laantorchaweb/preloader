@@ -1,7 +1,7 @@
 Image Preloader
 ===============
 
-This is a jquery plugin for pre loading images, it works by grabbing the src of the image in a custom data attribute. This comes in handy when you want to display smaller images on mobile for example.
+This is a jquery plugin for pre loading images, it works by grabbing the src of the image in a custom data attribute. This comes in handy when you want to display smaller images on mobile for example. Or maybe you only want to load the images when the user is scrolling down, or when triggers some event.
 
 The HTML:
 
@@ -12,6 +12,20 @@ The HTML:
 The Javascript:
 
 ```javascript
+// You could call the plugin this way (assuming the src of the image is in the data-src attribute):
+
+$('.container').find('img').preloader();
+
+// Or:
+
+$('.btn').on('click', function(){
+
+  $('.image').preloader();
+
+});
+
+// But, this is a more real world example
+
 var dataName = 'desktop';
 
 if ( isMobile() ) {
