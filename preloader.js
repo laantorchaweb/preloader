@@ -23,7 +23,9 @@
       } else {
 
         if( _this.options.hideIfNoData ) {
+
           $(this).hide();
+
         }
 
       }
