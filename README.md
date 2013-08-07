@@ -12,7 +12,7 @@ The HTML:
 The Javascript:
 
 ```javascript
-// You could call the plugin this way (assuming the src of the image is in the data-src attribute):
+// You could call the plugin this way (assuming the src of the image is in the data-src atribute):
 
 $('.container').find('img').preloader();
 
@@ -29,7 +29,7 @@ $('.btn').on('click', function(){
 var dataName = 'desktop';
 
 if ( isMobile() ) {
-    // You can have several data attributes pointing to diferent image sizes
+    // You can have several data atributes pointing to diferent image sizes
     dataName = 'mobile';
 }
 
@@ -57,7 +57,7 @@ $('.container').find('img').preloader({
 
 });
 ```
-By default the plugin will hide the images that you passed but that don't have the data attribute. This is useful for images that you don't want to show in the mobile site. If you prefer to display those empty tags you can set `hideIfNoData` to *false* when calling the plugin. (Check this out on the demo by resizing the window and reloading the page).
+By default the plugin will hide the images that you passed but that don't have the data atribute. This is useful for images that you don't want to show in the mobile site. If you prefer to display those empty tags you can set `hideIfNoData` to *false* when calling the plugin. (Check this out on the demo by resizing the window and reloading the page).
 
 Live Demo
 ---------
