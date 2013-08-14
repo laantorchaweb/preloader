@@ -80,7 +80,7 @@
 
       $.each( attributes, function() {
 
-        if( this.name !== 'src' && this.name !== 'data-' + _this.options.data ) {
+        if( this.name !== 'src' ) {
 
             $img.attr( this.name, this.value );
 
