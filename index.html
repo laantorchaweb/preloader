@@ -5,6 +5,8 @@
 
 	<title>Preloader Plugin for Images, using jQuery</title>
 
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+	<link rel="stylesheet" href="css/main.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 	<style>
@@ -38,48 +40,78 @@
 
 </head>
 <body>
-<p>You can try resizing the browser window to the smallest size and realoding the page to see different images.</p>
-<div class="status">
+  <div>
+    <div class="header">
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <a class="pure-menu-heading" href="">Preload Images Plugin</a>
 
-	<div class="loadbar"></div>
+            <ul>
+                <li class="pure-menu-selected"><a href="/">Demo</a></li>
+                <li><a href="https://raw.github.com/laantorchaweb/preloader/master/preloader.js">Download</a></li>
+                <li><a href="https://github.com/laantorchaweb/preloader">Contribute</a></li>
+            </ul>
+        </div>
+    </div>
 
-</div>
+    <div class="pure-g-r">
+        <div class="pure-u-1-3 photo-box">
+			<img id="img-1" class="image" src="" alt="1" data-desktop="img/samurai-06.jpg" data-mobile="img/ninja-02.jpg" data-slider="false">
+        </div>
 
-<div class="container">
-	<a href="https://github.com/laantorchaweb/preloader">Download from Github</a>
-</div>
+        <div class="pure-u-2-3 text-box">
+            <div class="l-box">
+            	<div class="status">
+					<div class="loadbar"></div>
+				</div>
+                <h1 class="text-box-head">Image Preloading jQuery Plugin</h1>
+                <div id="loaded-text">
+                	<p class="text-box-subhead">All images have been loaded.</p>
+                	<p>This is a jquery plugin for pre loading images, you have a callback for each one that it loads and when all have been loaded. It works by grabbing the src of the image in a custom data attribute. This comes in handy when you want to display smaller images on mobile for example. Or maybe you only want to load the images when the user is scrolling down, or when triggers some event.</p>
 
-<div class="container">
+                	<p>Try it out by resising the browser window to a smaller size and refresh the page, or click the button below:</p>
+                	<button id="change-images" class="pure-button pure-button-primary" data-target="mobile">Change Images</button>
+                </div>
+            </div>
+        </div>
 
-	<img id="img-1" class="image" src="" alt="1" data-desktop="http://fc00.deviantart.net/fs31/f/2008/235/b/d/DEMON_SAMURAI_II_by_aka_maelstrom.jpg" data-mobile="http://www.realultimatepower.net/ninja/ninjaparty.jpg" data-slider="false">
+        <div class="pure-u-2-3 photo-box">
+            <img id="img-4" class="image" src="" alt="4" data-desktop="img/samurai-08.jpg" data-mobile="img/ninja-03.jpg" data-slider="false">
+        </div>
+        <div class="pure-u-1-3 photo-box">
+            <img id="img-2" class="image" src="" alt="2" data-desktop="img/samurai-05.jpg" data-mobile="img/ninja-01.jpg" data-slider="false">
+        </div>
 
-	<img id="img-2" class="image" src="" alt="2" data-desktop="http://upload.wikimedia.org/wikipedia/commons/7/7c/Samurai_with_sword.jpg" data-mobile="http://static.ddmcdn.com/gif/ninja-12.jpg" data-slider="false">
+        <div class="pure-u-1-3 photo-box">
+            <img id="img-3" class="image" src="" alt="3" data-desktop="img/samurai-02.jpg" data-mobile="img/ninja-06.jpg" data-slider="false">
+        </div>
 
-	<img id="img-3" class="image" src="" alt="3" data-desktop="http://4.bp.blogspot.com/-SXNF5NBoUwA/TVbEViPtkNI/AAAAAAAAAG0/RFzH9iTLly0/s1600/Samurai.jpg" data-mobile="https://image.guim.co.uk/sys-images/Film/Pix/pictures/2009/12/14/1260808145073/Scene-from-Ninja-Assassin-001.jpg" data-slider="false">
+		<div class="pure-u-2-3 photo-box">
+			<img id="img-8" class="image" src="" alt="8" data-desktop="img/samurai-07.jpg" data-mobile="img/ninja-05.jpg" data-slider="false">
+		</div>
 
-	<img id="img-4" class="image" src="" alt="4" data-desktop="http://www.movpins.com/big/MV5BMTQ2NzEwNTA5MV5BMl5BanBnXkFtZTcwNDA5MTU4Mw/still-of-takashi-shimura-in-seven-samurai.jpg" data-mobile="http://nikkeiview.com/images/ninja-sho-kosugi.jpg" data-slider="false">
+		<div class="pure-u-2-3 photo-box">
+			<img id="img-9" class="image" src="" alt="9" data-desktop="img/samurai-03.jpg" data-mobile="img/ninja-04.jpg" data-slider="false">
+		</div>
 
-	<img id="img-5" class="image" src="" alt="5" data-desktop="http://files.myopera.com/sukekomashi-gaijin/albums/914939/sevenSamurai.jpg" data-slider="false">
-
-	<img id="img-6" class="image" src="" alt="6" data-desktop="http://www.medievalweaponinfo.com/wp-content/uploads/2011/04/samurai_armor.jpg" data-slider="false">
-
-	<img id="img-7" class="image" src="" alt="7" data-desktop="http://coolvibe.com/wp-content/uploads/2011/02/lotus_samurai_worrier-992x880.jpg" data-slider="false">
-
-	<img id="img-8" class="image" src="" alt="8" data-desktop="http://cyberomantic.files.wordpress.com/2012/07/satsuma-samurai-during-boshin-war-period.jpg" data-slider="false">
-
-	<img id="img-9" class="image" src="" alt="9" data-desktop="http://www.listofimages.com/wp-content/uploads/2012/02/samurai-blue-japanese-oriental-samurai.jpg" data-slider="false">
-
-	<img id="img-10" class="image" src="" alt="10" data-desktop="http://someinterestingfacts.net/wp-content/uploads/2013/01/Samurai-Armor.jpg" data-mobile="http://iganinja.jp/en/2008/02/12/n10.jpg" data-slider="false">
-
-	<img id="img-11" class="image" src="" alt="11" data-mobile="http://iganinja.jp/en/2008/02/12/n7.JPG" data-slider="false">
-
-	<img id="img-14" class="image" src="" alt="14" data-desktop="http://www.moss247.com/ekmps/shops/mossbristol78/images/samurai-with-sword-at-the-ready-780-p.jpg" data-slider="false">
-
-	<img id="img-15" class="image" src="" alt="15" data-title="Title" data-desktop="http://1.bp.blogspot.com/_xpph2rwJnW0/TMxcSZ9d8BI/AAAAAAAAAEw/zPPbQZSESmM/s1600/Cold+Samurai.jpg" data-slider="false">
-
-</div>
+        <div class="pure-u-1-3 photo-box">
+            <img id="img-6" class="image" src="" alt="6" data-desktop="img/samurai-01.jpg" data-mobile="img/ninja-07.jpg" data-slider="false">
+        </div>
 
 
+
+        <div class="pure-u-1">
+            <div class="l-box">
+                <h2>Using the plugin</h2>
+
+                <p>By default the plugin will hide the images that you passed but that don't have the data attribute. This is useful for images that you don't want to show in the mobile site. If you prefer to display those empty tags you can set hideIfNoData to false when calling the plugin. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        @laantorcha - laantorcha.net - github.com/laantorchaweb
+    </div>
+  </div>
 <script src="preloader.js"></script>
 <script>
 
@@ -89,9 +121,10 @@
 
 		if ( $(window).width() <= 480  ) {
 			dataName = 'mobile'; // You can have several data attributes pointing to diferrent image sizes
+			$('#change-images').data('target', 'desktop');
 		}
 
-		var total = $('.container').find('img').filter('[data-' + dataName + ']').length; // Filter by data type to create the loading bar
+		var total = $('.image').filter('[data-' + dataName + ']').length; // Filter by data type to create the loading bar
 
 		$('.loadbar').css({
 			width: total * 20
@@ -99,7 +132,7 @@
 
 		// Initialize the plugin
 
-		$('.container').find('img').preloader({
+		$('.image').preloader({
 
 			data: dataName, // this is the data attr that contains the url you wan to load
 
@@ -116,16 +149,42 @@
 
 			all: function() {
 
-				$(this).each(function() {
+				// $(this).each(function() {
 
 					// inside the "all" function "this" is an array with all jquery image objects
 
 				  	// console.log(this);
-				});
+				// });
+				console.log('all images have been loaded');
+				$('#loaded-text').fadeIn();
 
-				$('<h3 />', {
-					text: 'All Images have been loaded!'
-				}).prependTo('.status');
+			}
+
+		});
+
+		$('#change-images').on('click', function() {
+			var $this  = $(this),
+				target = $this.data('target');
+
+			$('.individual', '.loadbar').remove();
+
+			$('.image').preloader({
+				data: target,
+
+				each: function() {
+					$('<div />', {
+						'class': 'individual'
+					}).prependTo('.loadbar');
+				}
+			});
+
+			if( target === 'mobile') {
+
+				$this.data('target', 'desktop')
+
+			} else {
+
+				$this.data('target', 'mobile')
 
 			}
 
